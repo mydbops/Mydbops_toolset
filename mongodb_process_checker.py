@@ -186,7 +186,7 @@ def get_proc():
         ts = proc.get('microsecs_running', 0) / (1000 * 1.00)
         kt = ts / 1000
         pt = read_time(ts)
-        qry = proc.get('query', '')
+        qry = proc.get('command', '')
         qry = dumps(qry)
         msg = proc.get('msg', '')
         wfl = proc.get('waitingForLock', '')
